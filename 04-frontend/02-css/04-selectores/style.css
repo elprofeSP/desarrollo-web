@@ -1,0 +1,37 @@
+/* por etiqueta o elemento */
+p {
+  color: blue;
+}
+/* por clase */
+.titulo {
+  color: red;
+}
+/* por id */
+#titulo {
+  color: green;
+}
+
+div p {
+  color: tomato;
+}
+
+h1 {
+  color: aqua;
+  font-size: 32px;
+  background-color: blueviolet;
+  transition: all 0.5s linear;
+}
+
+h1:hover {
+  color: red;
+  font-size: 50px;
+  background-color: chartreuse;
+}
+
+h1::before {
+  content: "****";
+}
+
+h1::first-letter {
+  color: red;
+}

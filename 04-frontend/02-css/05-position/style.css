@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  /* Valor por defecto */
+  position: static;
+}
+
+.box1 {
+  background-color: blueviolet;
+  border: 2px solid rgb(96, 10, 176);
+  position: relative;
+  left: 40px;
+  z-index: 1;
+}
+
+.box2 {
+  background-color: aqua;
+  border: 2px solid blue;
+}
+
+.box3 {
+  background-color: orange;
+  border: 2px solid orangered;
+  position: fixed;
+  top: 0px;
+  z-index: 0;
+}
+
+.box4 {
+  background-color: royalblue;
+  border: 2px solid blue;
+}
+
+/*
+otros valores
+position: absolute
+position: relative
+position: fixed
+position: sticky 
+
+Propiedades relacionadas con position
+top, right, left, bottom, z-index
+*/

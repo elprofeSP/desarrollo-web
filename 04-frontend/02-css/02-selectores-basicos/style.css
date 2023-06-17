@@ -1,0 +1,12 @@
+/* selector por elemento */
+p {
+  color: red;
+}
+/* selector por clase */
+.parrafo {
+  color: blue;
+}
+/* selector por id */
+#parrafito {
+  color: green;
+}

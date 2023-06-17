@@ -1,0 +1,14 @@
+img {
+    width: 200px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: dodgerblue;
+    color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
