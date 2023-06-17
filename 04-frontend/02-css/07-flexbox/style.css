@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.padre {
+  background-color: yellowgreen;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  /* izquierda-derecha */
+  justify-content: center;
+  /* arriba-abajo */
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hijo {
+  border: 2px solid orangered;
+  background-color: dodgerblue;
+  width: 50px;
+  height: 50px;
+}
+
+.hijo1 {
+  order: 2;
+}
+
+.hijo2 {
+  order: 3;
+}
+
+.hijo3 {
+  order: 1;
+}

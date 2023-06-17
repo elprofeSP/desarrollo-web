@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor-carta {
+  background-color: aliceblue;
+  width: 900px;
+  height: 600px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 8px 4px 20px 10px rgba(65, 72, 92, 0.157);
+}
+
+.contenedor-izquierda {
+  background-color: blueviolet;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.contenedor-derecha {
+  background-color: aliceblue;
+  width: 50%;
+}
