@@ -17,8 +17,8 @@ main {
 
 .contenedor-carta {
   background-color: aliceblue;
-  width: 900px;
-  height: 600px;
+  width: 800px;
+  height: 500px;
   display: flex;
   border-radius: 20px;
   overflow: hidden;
@@ -26,12 +26,129 @@ main {
 }
 
 .contenedor-izquierda {
-  background-color: blueviolet;
+  background: linear-gradient(
+    180deg,
+    rgba(122, 0, 221, 1) 0%,
+    rgba(0, 9, 255, 1) 100%
+  );
   width: 50%;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.contenedor-izquierda h2 {
+  color: #c5cbd2;
+}
+
+.circulo {
+  background: linear-gradient(
+    180deg,
+    rgb(66, 0, 221) 0%,
+    rgba(0, 9, 255, 1) 100%
+  );
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circulo-numero {
+  font-size: 50px;
+  color: aliceblue;
+  font-weight: 700;
+}
+
+.circulo-cien {
+  color: #c5cbd2;
+}
+
+.titulo-resultado {
+  color: aliceblue;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.contenedor-izquierda p {
+  color: #c5cbd2;
+  text-align: center;
 }
 
 .contenedor-derecha {
   background-color: aliceblue;
   width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.habilidad {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.habilidad-izquierda {
+  display: flex;
+  gap: 8px;
+}
+
+.habilidad-derecha span:nth-child(1) {
+  color: rgb(38, 38, 47);
+}
+
+.habilidad-derecha span:nth-child(2) {
+  color: #adafb1;
+}
+
+.rojo {
+  background-color: rgba(252, 199, 199, 0.35);
+  color: #f55;
+}
+
+.amarillo {
+  background-color: rgba(248, 252, 199, 0.35);
+  color: #FFB21E;
+}
+
+.verde {
+  background-color: rgba(199, 252, 207, 0.35);
+  color: #00BB8F;
+}
+
+.azul {
+  background-color: rgba(199, 202, 252, 0.35);
+  color: #1125D6;
+}
+
+button {
+  background-color: rgb(38, 38, 47);
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  border: 2px solid rgb(38, 38, 47);
+  background-color: aliceblue;
+  color: rgb(38, 38, 47);
 }
