@@ -1,0 +1,30 @@
+body {
+  background-color: cornflowerblue;
+}
+
+h1 {
+  color: white;
+}
+
+/* min-width - desde que el ancho sea... */
+/* max-width - hasta que el ancho sea... */
+
+@media (min-width: 600px) {
+  body {
+    background-color: darkgreen;
+  }
+
+  h1 {
+    color: darkorange;
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    display: none;
+  }
+
+  body {
+    background-color: yellow;
+  }
+}
