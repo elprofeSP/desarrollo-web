@@ -36,11 +36,48 @@ do {
 
 // TODO: Calcular la suma de los números del 1 al 100 e imprimir el resultado en la consola. 😈💯 MODO TRYHARD
 
-let resultado = 0;
+// let resultado = 0;
 
-for (let contador = 1; contador <= 100; contador++) {
-  resultado = resultado + contador;
-  //resultado += contador;
+// for (let contador = 1; contador <= 100; contador++) {
+//   resultado = resultado + contador;
+// }
+
+// console.log("Resultado es " + resultado);
+
+// function sumar(numeros) {
+//   let sumatoria = 0;
+
+//   for (let i = 0; i < numeros.length; i++) {
+//     sumatoria = sumatoria + numeros[i];
+//   }
+
+//   return sumatoria;
+// }
+// console.log(sumar([1, 2, 5, 6, 8]));
+// console.log(sumar([4, 6, 7]));
+// console.log(sumar([1, 2, 3]));
+
+//for-in
+// const carro = {
+//   key: value
+//   llantas: 4,
+//   marca: "Renault",
+//   modelo: 2004,
+//   velocidad: 80,
+// };
+
+//acceder a los valores de un objeto
+// carro.marca
+// carro["marca"]
+
+// for (const propiedad in carro) {
+//   console.log(propiedad);
+//   console.log(carro[propiedad]);
+// }
+
+//for-of
+let lista = ["Dairon", "Jose", "Jonathan", "Angelo"];
+
+for (const nombre of lista) {
+  console.log(nombre);
 }
-
-console.log("Resultado es " + resultado);
