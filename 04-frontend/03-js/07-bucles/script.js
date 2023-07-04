@@ -76,8 +76,8 @@ do {
 // }
 
 //for-of
-let lista = ["Dairon", "Jose", "Jonathan", "Angelo"];
+// let lista = ["Dairon", "Jose", "Jonathan", "Angelo"];
 
-for (const nombre of lista) {
-  console.log(nombre);
-}
+// for (const nombre of lista) {
+//   console.log(nombre);
+// }
