@@ -81,7 +81,7 @@ function sonIguales(x, y) {
 }
 console.log(sonIguales(5, 8));
 console.log(sonIguales(8, 8));
-console.log(sonIguales("fabian", "jose"));
+console.log(sonIguales("fabian", "fabian"));
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
@@ -130,6 +130,7 @@ function esImpar(num) {
   // Tu código:
   return num % 2 !== 0;
 }
+// console.log(esImpar(12))
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
@@ -168,6 +169,7 @@ function redondearHaciaArriba(num) {
   let numeroRedondeado = Math.ceil(num);
   return numeroRedondeado;
 }
+console.log(redondearHaciaArriba(4.1));
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
@@ -180,6 +182,10 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+  if (typeof numero !== "number") {
+    return "Solo puedes utilizar numeros";
+  }
+
   if (numero > 0) {
     return "Es positivo";
   } else if (numero < 0) {
@@ -188,6 +194,7 @@ function esPositivo(numero) {
     return false;
   }
 }
+console.log(esPositivo(0));
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -198,10 +205,11 @@ function agregarSimboloExclamacion(str) {
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
-  // Ejemplo: "Soy", "Henry" -> "Soy Henry"
+  // Ejemplo: "Fabian", "Gomez" -> "Fabian Gomez"
   // Tu código:
   return nombre + " " + apellido;
 }
+console.log(combinarNombres("Fabian", "Gomez"));
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
@@ -220,6 +228,7 @@ function retornarPerimetro(lado) {
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   return lado * 4;
+  // return lado + lado + lado + lado;
 }
 
 function areaDelTriangulo(base, altura) {
@@ -232,10 +241,10 @@ function deEuroAdolar(euro) {
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  let dolar = euro * 1.2;
+  let conversion = 1.2;
+  let dolar = euro * conversion;
   return dolar;
 }
-
 console.log(deEuroAdolar(1));
 
 function esVocal(letra) {
@@ -244,4 +253,30 @@ function esVocal(letra) {
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+  if (typeof letra !== "string") {
+    return "No es un string, dato incorrecto.";
+  }
+
+  if (letra.length === 0) {
+    return "Escriba algo";
+  }
+
+  if (letra.length > 1) {
+    return "Tiene mas de una letra";
+  }
+
+  let letraMinuscula = letra.toLowerCase();
+
+  if (
+    letraMinuscula === "a" ||
+    letraMinuscula === "e" ||
+    letraMinuscula === "i" ||
+    letraMinuscula === "o" ||
+    letraMinuscula === "u"
+  ) {
+    return "Es vocal";
+  } else {
+    return "No es una vocal";
+  }
 }
+console.log(esVocal());
