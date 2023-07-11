@@ -15,7 +15,7 @@ Mi nombre es [Fabian Gomez](https://github.com/fabian37) y seré su instructor e
   - [Sitio web](https://somospacifico.org/)
 
 - **Tranqui**: Es la primera plataforma de planeación financiera, que ayuda con el manejo de las deudas en Colombia. Buscan ayudar a los usuarios que tienen algún tipo de problema de pago con su deuda, brindando la información necesaria sobre las opciones de negociación que tienen sobre su deuda y acompañándolos a tomar la mejor decisión con respecto a esta, como por ejemplo negociarla.
-  - [Sitio web](<(https://tranquifinanzas.com/)>)
+  - [Sitio web](https://tranquifinanzas.com/)
 
 ## 📚 ¿Que aprenderemos?
 
