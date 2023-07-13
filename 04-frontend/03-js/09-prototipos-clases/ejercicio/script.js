@@ -21,3 +21,46 @@
 
 7. Crea instancias de las clases "Automovil" y "Motocicleta" y llama al método "obtenerDetalles" en cada una de ellas para comprobar que funcionan correctamente.
 */
+
+class Vehiculo {
+  constructor(marca, modelo, anio) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.anio = anio;
+  }
+
+  obtenerDetalles() {
+    return `marca: ${this.marca}, modelo: ${this.modelo}, anio: ${this.anio}`;
+  }
+}
+
+class Automovil extends Vehiculo {
+  constructor(marca, modelo, anio, puertas) {
+    super(marca, modelo, anio);
+    this.puertas = puertas;
+  }
+
+  obtenerDetalles() {
+    return `marca: ${this.marca}, modelo: ${this.modelo}, anio: ${this.anio}, puertas: ${this.puertas}`;
+  }
+}
+
+class Motocicleta extends Vehiculo {
+  constructor(marca, modelo, anio, cilindrada) {
+    super(marca, modelo, anio);
+    this.cilindrada = cilindrada;
+  }
+
+  obtenerDetalles() {
+    return `marca: ${this.marca}, modelo: ${this.modelo}, anio: ${this.anio}, cilindraje: ${this.cilindrada}`;
+  }
+}
+
+const cicla = new Vehiculo("GW", "Lancer", 2010);
+console.log(cicla.obtenerDetalles());
+
+const renault = new Automovil("Renault", "Sandero", 2018, 5);
+console.log(renault.obtenerDetalles());
+
+const moto = new Motocicleta("Honda", "XR150", 2020, 148);
+console.log(moto.obtenerDetalles());
