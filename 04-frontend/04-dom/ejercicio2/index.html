@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2 DOM</title>
+    <style>
+      /* Estilos CSS para el contenido */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      #app {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .titulo {
+        color: #333;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .descripcion {
+        color: #666;
+        font-size: 16px;
+        text-align: justify;
+        margin-bottom: 10px;
+      }
+
+      .imagen-gato {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .razas-gatos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: circle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- 👇 Este codigo debe ser escrito desde javascript 👇 -->
+      <h1 class="titulo">Los Gatos</h1>
+      <p class="descripcion">
+        Los gatos son animales domésticos que se caracterizan por su elegancia,
+        agilidad y carácter independiente. Son mascotas muy populares en todo el
+        mundo.
+      </p>
+      <img
+        class="imagen-gato"
+        src="https://http.cat/images/200.jpg"
+        alt="Gato"
+      />
+      <h2 class="titulo">Razas de Gatos</h2>
+      <ul class="razas-gatos">
+        <li class="descripcion">Persa</li>
+        <li class="descripcion">Siames</li>
+        <li class="descripcion">Maine Coon</li>
+        <li class="descripcion">Bengalí</li>
+      </ul>
+      <!-- 👆 Este codigo debe ser escrito desde javascript 👆 -->
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
