@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos en el DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">ClubHouse</div>
+    </header>
+    <main>
+      <h1>Eventos en el DOM</h1>
+      <h2>Que son los eventos?</h2>
+      <p>
+        Los eventos son acciones que ocurren en el DOM, como hacer click en un
+        boton, mover el mouse, etc.
+      </p>
+      <h2 onclick="console.log('Hola desde html')">
+        Formulario para registrarse
+      </h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" />
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" />
+        <button type="submit">Enviar</button>
+      </form>
+      <h2>Lista de Estudiantes</h2>
+      <button id="btn">Agregar Estudiantes a la lista</button>
+      <ul>
+        <li>Angelo</li>
+        <li>Moreno</li>
+        <li>Jose</li>
+      </ul>
+    </main>
+    <footer>
+      <div>Derechos de autor 2023 - Clubhouse</div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

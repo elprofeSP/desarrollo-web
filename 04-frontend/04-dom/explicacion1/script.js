@@ -204,3 +204,14 @@ input.setAttribute("type", "email");
 // h5.textContent = "Hola soy un h5";
 // Reemplazo el elemento
 // body.replaceChild(h5, h1);
+
+// Modificando estilos
+// 1. element.style.property -> Devuelve el valor de la propiedad de estilo especificada en el elemento
+const h1 = document.querySelector("h1");
+h1.style.color = "red";
+h1.style.backgroundColor = "blue";
+h1.style.fontSize = "50px";
+
+const brayan = document.querySelector("#brayan");
+brayan.classList.add("nombre");
+// brayan.className += " nombre"

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+  background-color: royalblue;
+  padding: 1em;
+  color: azure;
+  font-weight: bold;
+  font-style: italic;
+}
+
+main {
+  padding: 1em;
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.5em;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+form input {
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+button {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: royalblue;
+  color: azure;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
