@@ -65,3 +65,25 @@ button {
 ul {
   margin: 1em;
 }
+
+.eventos div {
+  text-decoration: center;
+}
+
+#div-1 {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+}
+
+#div-2 {
+  background-color: green;
+  width: 300px;
+  height: 300px;
+}
+
+#div-3 {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+}

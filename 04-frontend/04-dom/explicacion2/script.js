@@ -5,7 +5,7 @@ function saludar() {
   console.log("Has hecho click en el titulo");
 }
 
-titulo.onclick = saludar;
+// titulo.onclick = saludar;
 
 // Finalmente la mejor opcion para escuchar eventos
 const logo = document.querySelector("#logo");
@@ -15,7 +15,7 @@ const salu2 = function (evento) {
   console.log("Has hecho click en el logo");
 };
 
-logo.addEventListener("click", salu2);
+// logo.addEventListener("click", salu2);
 
 // Agregar un nuevo estudiante a la lista
 // Seleccionar el btn y el input
@@ -52,7 +52,7 @@ function agregarEstudiante() {
   inputEstudiante.value = "";
 }
 
-btnEstudiante.addEventListener("click", agregarEstudiante);
+// btnEstudiante.addEventListener("click", agregarEstudiante);
 
 // Eventos en formularios
 const form = document.querySelector("form");
@@ -71,3 +71,98 @@ const input = document.querySelector("#nombre");
 input.addEventListener("input", (evento) => {
   console.log(evento);
 });
+
+// remover un evento
+const btnRemover = document.querySelector("#btnRemover");
+
+btnRemover.addEventListener("dblclick", () => {
+  btnEstudiante.removeEventListener("click", agregarEstudiante);
+  alert("Se ha removido el evento click del boton agregar estudiante");
+  btnEstudiante.textContent = "Evento removido";
+});
+
+// Propagacion: bubbling y capturing
+const div1 = document.querySelector("#div-1");
+const div2 = document.querySelector("#div-2");
+const div3 = document.querySelector("#div-3");
+
+// div1.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   console.log("click div 1 y se disparo en " + e.target.id);
+// });
+
+// div2.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   console.log("click div 2 y se disparo en " + e.target.id);
+// });
+
+// div3.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   console.log("click div 3 y se disparo en " + e.target.id);
+// });
+
+// Delegacion de eventos
+document.addEventListener("click", (e) => {
+  if (e.target.matches("#div-1")) {
+    console.log("Holi en el div 1");
+  }
+  if (e.target.matches("#div-2")) {
+    console.log("Holi en el div 2");
+  }
+  if (e.target.matches("#div-3")) {
+    console.log("Holi en el div 3");
+  }
+  if (e.target.matches("#btnEstudiante")) {
+    agregarEstudiante();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("El DOM ha sido cargado");
+});
+
+// Template en el dom
+const codigos = document.querySelector("#codigos");
+const template = document.querySelector("#template").content;
+const fragment = document.createDocumentFragment();
+
+const otrosCodigos = [
+  {
+    codigo: "300 - Multiple Choices",
+    img: "https://http.cat/images/300.jpg",
+  },
+  {
+    codigo: "301 - Moved Permanently",
+    img: "https://http.cat/images/301.jpg",
+  },
+  {
+    codigo: "302 - Found",
+    img: "https://http.cat/images/302.jpg",
+  },
+  {
+    codigo: "303 - See Other",
+    img: "https://http.cat/images/303.jpg",
+  },
+  {
+    codigo: "304 - Not Modified",
+    img: "https://http.cat/images/304.jpg",
+  },
+  {
+    codigo: "305 - Use Proxy",
+    img: "https://http.cat/images/305.jpg",
+  },
+  {
+    codigo: "306 - Switch Proxy",
+    img: "https://http.cat/images/306.jpg",
+  },
+];
+
+otrosCodigos.forEach((codigo) => {
+  template.querySelector("img").setAttribute("src", codigo.img);
+  template.querySelector("div#mensaje").textContent = codigo.codigo;
+
+  let clone = document.importNode(template, true);
+  fragment.appendChild(clone);
+});
+
+codigos.appendChild(fragment);
