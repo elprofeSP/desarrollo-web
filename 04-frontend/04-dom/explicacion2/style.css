@@ -46,12 +46,13 @@ form {
   gap: 0.5em;
 }
 
-form input {
+input {
   padding: 0.5em;
   border-radius: 0.5em;
 }
 
 button {
+  margin: 1em;
   padding: 0.5em;
   border-radius: 0.5em;
   background-color: royalblue;
@@ -59,4 +60,8 @@ button {
   font-weight: bold;
   font-style: italic;
   cursor: pointer;
+}
+
+ul {
+  margin: 1em;
 }

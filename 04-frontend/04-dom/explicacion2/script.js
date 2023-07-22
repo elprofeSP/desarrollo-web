@@ -17,21 +17,42 @@ const salu2 = function (evento) {
 
 logo.addEventListener("click", salu2);
 
-//Obtener elemento
-const btn = document.querySelector("#btn");
+// Agregar un nuevo estudiante a la lista
+// Seleccionar el btn y el input
+const btnEstudiante = document.querySelector("#btnEstudiante");
+const inputEstudiante = document.querySelector("#estudiante");
 
-function agregarMarlovy() {
-  // Selecciono el padre (ul)
-  const lista = document.querySelector("ul");
-  // Crear el li marlovy
-  const marlovy = document.createElement("li");
-  // Modificar el li marlovy
-  marlovy.textContent = "Marlovy";
-  // Agrego el hijo (marlovy) al padre (ul)
-  lista.appendChild(marlovy);
+function agregarEstudiante() {
+  //obtener el padre
+  const ul = document.querySelector("ul");
+  //validar que el input no este vacio
+  if (inputEstudiante.value.length === 0) {
+    alert("Vea loco, escriba algo por lo menos 😒");
+    return;
+  }
+  //validar si el usuario existe en la lista
+  //convertir nodelist a un array
+  const listaArray = Array.from(ul.children);
+  //utilizar el metodo some de los array para validar si el estudiante existe
+  const estudianteExiste = listaArray.some(
+    (estudiante) => estudiante.textContent === inputEstudiante.value
+  );
+  // Si existe mostramos un mensaje de alerta, si no existe creamos el nuevo usuario
+  if (estudianteExiste) {
+    alert("El estudiante ya existe, prueba con otro nombre");
+  } else {
+    //crear el nuevo estudiante (li)
+    const li = document.createElement("li");
+    //cambiar el texto del li
+    li.textContent = inputEstudiante.value;
+    //agregar el nuevo estudiante a la lista
+    ul.appendChild(li);
+  }
+  //limpiar el input
+  inputEstudiante.value = "";
 }
 
-btn.addEventListener("click", agregarMarlovy);
+btnEstudiante.addEventListener("click", agregarEstudiante);
 
 // Eventos en formularios
 const form = document.querySelector("form");
@@ -39,11 +60,14 @@ const form = document.querySelector("form");
 form.addEventListener("submit", function (evento) {
   evento.preventDefault();
   console.log(evento);
+  console.log(evento.target.nombre.value);
+  console.log(evento.target.apellido.value);
+  console.log(evento.target.password.value);
 });
 
 // Evento input
 const input = document.querySelector("#nombre");
 
 input.addEventListener("input", (evento) => {
-  console.log(evento.target.value);
+  console.log(evento);
 });
