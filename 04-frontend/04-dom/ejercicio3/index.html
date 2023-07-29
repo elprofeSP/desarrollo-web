@@ -9,16 +9,15 @@
   <body>
     <main>
       <h1>Calculadora de IMC</h1>
-      <div id="app">
+      <form id="app">
         <label for="peso">Peso (kg)</label>
         <input type="number" name="peso" id="peso" step="0.1" required />
         <label for="altura">Altura (m)</label>
         <input type="number" name="altura" id="altura" step="0.1" required />
         <button id="calcular">Calcular</button>
-      </div>
-      <div id="resultado">
-        Resultado: 
-      </div>
+      </form>
+      <h2>Resultado</h2>
+      <div id="resultado"></div>
     </main>
     <script src="./script.js"></script>
   </body>

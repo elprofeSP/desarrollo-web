@@ -2,7 +2,21 @@ const inputPeso = document.querySelector("#peso");
 const inputAltura = document.querySelector("#altura");
 const botonCalcular = document.querySelector("#calcular");
 
-const calcularIMC = () => {
+const calcularIMC = (evento) => {
+  // evito que se recargue la pagina
+  evento.preventDefault();
+  // validar que los campos no esten vacios
+  if (
+    inputAltura.value === "" ||
+    inputPeso.value === "" ||
+    inputAltura.value <= 0 ||
+    inputPeso.value <= 0
+  ) {
+    alert("No se admiten campos vacios");
+    inputPeso.value = "";
+    inputAltura.value = "";
+    return;
+  }
   // guardo el valor del input peso en una variable
   const peso = inputPeso.value;
   // guardo el valor del input altura en una variable
@@ -15,13 +29,13 @@ const calcularIMC = () => {
   const resultado = document.querySelector("#resultado");
   // muestro el resultado en el html segun el imc
   if (resultadoFinal < 18.5) {
-    resultado.textContent += ` Tu imc es ${resultadoFinal}, tienes bajo peso.`;
+    resultado.textContent = `Tu imc es ${resultadoFinal}, tienes bajo peso.`;
   } else if (resultadoFinal >= 18.5 && resultadoFinal < 25) {
-    resultado.textContent += ` Tu imc es ${resultadoFinal}, tienes peso normal.`;
+    resultado.textContent = `Tu imc es ${resultadoFinal}, tienes peso normal.`;
   } else if (resultadoFinal >= 25 && resultadoFinal < 30) {
-    resultado.textContent += ` Tu imc es ${resultadoFinal}, tienes sobrepeso.`;
+    resultado.textContent = `Tu imc es ${resultadoFinal}, tienes sobrepeso.`;
   } else {
-    resultado.textContent += ` Tu imc es ${resultadoFinal}, tienes obesidad.`;
+    resultado.textContent = `Tu imc es ${resultadoFinal}, tienes obesidad.`;
   }
   // limpio los inputs
   inputPeso.value = "";
