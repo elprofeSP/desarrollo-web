@@ -7,5 +7,10 @@ export function menu() {
       document.querySelector(".menu-lateral").classList.toggle("abierto");
       document.querySelector(".btn-contenedor").classList.toggle("is-active");
     }
+
+    if (e.target.matches(".menu-lateral a")) {
+      document.querySelector(".menu-lateral").classList.remove("abierto");
+      document.querySelector(".btn-contenedor").classList.remove("is-active");
+    }
   });
 }
