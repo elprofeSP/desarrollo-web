@@ -49,6 +49,7 @@ section {
 }
 
 .menu-lateral {
+  z-index: 998;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,4 +79,18 @@ section {
 
 .menu-lateral nav a:hover {
   color: var(--color-principal);
+}
+
+.btn-contenedor {
+  z-index: 999;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--color-principal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
 }
