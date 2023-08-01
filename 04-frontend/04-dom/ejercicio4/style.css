@@ -53,10 +53,20 @@ section {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100vh;
   overflow-y: auto;
   background-color: #000000b8;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.abierto {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .menu-lateral nav {
