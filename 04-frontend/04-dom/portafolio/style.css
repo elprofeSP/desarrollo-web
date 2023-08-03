@@ -108,3 +108,57 @@ section {
   width: 4.5rem;
   height: 4.5rem;
 }
+
+.calculadora {
+  background-color: rgb(190, 190, 190);
+  color: var(--letra-color-secundario);
+  width: 350px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pantalla {
+  grid-column: 1 / -1;
+  background-color: white;
+  color: var(--letra-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.btn-calculadora {
+  background-color: rgb(190, 190, 190);
+  color: var(--letra-color-secundario);
+  border: none;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-calculadora:hover {
+  background-color: rgb(141, 141, 141);
+}
+
+#cero {
+  grid-column: span 2;
+}
+
+#igual {
+  grid-row: span 2;
+  background-color: var(--color-principal);
+}
+
+#igual:hover {
+  background-color: rgb(0, 0, 255, 0.8);
+}
