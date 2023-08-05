@@ -130,6 +130,7 @@ section {
   margin-bottom: 1rem;
   font-family: monospace;
   font-weight: 700;
+  overflow-x: auto;
 }
 
 .btn-calculadora {
