@@ -136,6 +136,10 @@ siMePortoBien
     console.log(error);
   }); */
 
+/*
+? Ejemplo 2
+*/
+
 let hayUnaPersona = true;
 
 function hola(nombre) {
@@ -168,3 +172,16 @@ hola("Angelo")
   .catch((error) => {
     console.log(error);
   });
+
+// ! Actividad investigar:
+
+// Responder y explicar las siguientes preguntas
+// Los grupos deben buscar ejemplos de código, casos de uso reales y ejemplos históricos para respaldar su investigación.
+
+// a. Que son los Callbacks?
+// b. Que son las Promesas y para que sirven?
+// c. Que es Async/await y para que sirve?
+// d. Para que sirve Fetch?
+
+// Cada grupo debe preparar una presentación breve (10 minutos)
+// Las presentaciones deben incluir ejemplos de código, diagramas o ilustraciones que ayuden a visualizar conceptos clave.
