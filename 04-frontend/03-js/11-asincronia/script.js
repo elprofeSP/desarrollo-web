@@ -305,10 +305,11 @@ siMePortoBien
 // Fetch es una API de JavaScript que nos permite hacer peticiones HTTP desde el navegador.
 // fetch("https://jsonplaceholder.typicode.com/comments/1")
 
-const url = "https://jsonplaceholder.typicode.com/comments/1";
-fetch(url)
-  .then((respuesta) => respuesta.json())
-  .then((data) => console.log(data.email));
+// const url = "https://jsonplaceholder.typicode.com/comments/1";
+// fetch(url)
+//   .then((respuesta) => respuesta.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log(error));
 
 // ? Actividad investigar:
 
