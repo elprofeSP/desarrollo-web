@@ -96,6 +96,71 @@ hola("Juan", (nombre) => {
   });
 }); */
 
+/*
+? Ejemplo 4
+*/
+/* const mostrarDoble = (numero) => {
+  console.log(numero * 2);
+}
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach(mostrarDoble); */
+
+/*
+? Ejemplo 5
+*/
+
+// function soyAsincrona(miCallback) {
+//   setTimeout(() => {
+//     console.log("Hola soy asincrona");
+//     miCallback();
+//   }, 2000);
+// }
+
+// console.log("Iniciando proceso...");
+// soyAsincrona(() => {
+//   console.log("Terminando proceso...");
+// });
+
+// Callback hell o piramide de la muerte
+
+/*
+? Ejemplo 6
+*/
+
+// function hola(nombre, callback) {
+//   setTimeout(() => {
+//     console.log("Hola " + nombre);
+//     callback(nombre);
+//   }, 2000);
+// }
+
+// function hablar(callbackHablar) {
+//   setTimeout(() => {
+//     console.log("Bla bla bla bla...");
+//     callbackHablar();
+//   }, 1000);
+// }
+
+// function chao(nombre, otroCallback) {
+//   setTimeout(() => {
+//     console.log("Chao " + nombre);
+//     otroCallback();
+//   }, 1000);
+// }
+
+// console.log("Iniciando proceso...");
+// hola("Angelo", (nombre) => {
+//   hablar(() => {
+//     hablar(() => {
+//       hablar(() => {
+//         chao(nombre, () => {
+//           console.log("Terminando proceso...");
+//         });
+//       });
+//     });
+//   });
+// });
+
 // b. Promesas
 
 // Una promesa es un objeto que representa la terminación o el fracaso eventual de una operación asíncrona.
@@ -140,40 +205,112 @@ siMePortoBien
 ? Ejemplo 2
 */
 
-let hayUnaPersona = true;
+// function hola(nombre) {
+//   return new Promise((resolve, reject) => {
+//     if (typeof nombre !== "string") {
+//       reject("El nombre no es un string");
+//     } else {
+//       setTimeout(() => {
+//         console.log("Hola " + nombre);
+//         resolve(nombre);
+//       }, 2000);
+//     }
+//   });
+// }
 
-function hola(nombre) {
-  return new Promise((resolve, reject) => {
-    if (hayUnaPersona) {
-      setTimeout(() => {
-        console.log("Hola");
-        resolve(nombre);
-      }, 2000);
-    } else {
-      reject("No se pudo saludar");
-    }
-  });
-}
+// function hablar(nombre) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Bla bla bla bla...");
+//       resolve(nombre);
+//     }, 1000);
+//   });
+// }
 
-function hablar() {
-  console.log("Bla bla bla bla...");
-}
+// function chao(nombre) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Chao " + nombre);
+//       resolve();
+//     }, 1000);
+//   });
+// }
 
-hola("Angelo")
-  .then((nombre) => {
-    console.log("Hola " + nombre);
-  })
-  .then(hablar)
-  .then(hablar)
-  .then(hablar)
-  .then(() => {
-    console.log("Adios");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// console.log("Iniciando proceso...");
+// hola("Angelo")
+//   .then(hablar)
+//   .then(hablar)
+//   .then(hablar)
+//   .then(chao)
+//   .then(() => {
+//     console.log("Terminando proceso...");
+//   })
+//   .catch((error) => {
+//     console.log("Mire el error es el siguiente: " + error);
+//   });
 
-// ! Actividad investigar:
+// c. Async/await
+
+// Async/await es una forma de escribir código asíncrono que parece síncrono, por detras utiliza promesas.
+
+// function hola(nombre) {
+//   return new Promise((resolve, reject) => {
+//     if (typeof nombre !== "string") {
+//       reject("El nombre no es un string");
+//     } else {
+//       setTimeout(() => {
+//         console.log("Hola " + nombre);
+//         resolve(nombre);
+//       }, 2000);
+//     }
+//   });
+// }
+
+// function hablar(nombre) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Bla bla bla bla...");
+//       resolve(nombre);
+//     }, 1000);
+//   });
+// }
+
+// function chao(nombre) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Chao " + nombre);
+//       resolve();
+//     }, 1000);
+//   });
+// }
+
+// async function conversacion() {
+//   try {
+//     const nombre = await hola(2);
+//     await hablar();
+//     await hablar();
+//     await hablar();
+//     await chao(nombre);
+//     console.log("Terminando proceso...");
+//   } catch (error) {
+//     console.log("Mire el error es el siguiente: " + error);
+//   }
+// }
+
+// console.log("Iniciando proceso...");
+// conversacion();
+
+// d. Para que sirve Fetch?
+
+// Fetch es una API de JavaScript que nos permite hacer peticiones HTTP desde el navegador.
+// fetch("https://jsonplaceholder.typicode.com/comments/1")
+
+const url = "https://jsonplaceholder.typicode.com/comments/1";
+fetch(url)
+  .then((respuesta) => respuesta.json())
+  .then((data) => console.log(data.email));
+
+// ? Actividad investigar:
 
 // Responder y explicar las siguientes preguntas
 // Los grupos deben buscar ejemplos de código, casos de uso reales y ejemplos históricos para respaldar su investigación.
