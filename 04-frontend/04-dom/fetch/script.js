@@ -1,20 +1,5 @@
-const url = "https://jsonplaceholder.typicode.com/comments/1000";
+const url = "https://jsonplaceholder.typicode.com/comments/";
 const comentarios = document.querySelector(".comentarios");
-
-fetch(url)
-  .then((respuesta) => {
-    if (!respuesta.ok) {
-      throw new Error("No se ha podido conectar");
-    } else {
-      return respuesta.json();
-    }
-  })
-  .then((data) => {
-    mostrarComentario(data);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
 
 function mostrarComentario(data) {
   const comentario = document.createElement("div");
@@ -28,3 +13,49 @@ function mostrarComentario(data) {
   comentario.append(h2, h3, p);
   comentarios.append(comentario);
 }
+
+fetch(url)
+  .then((respuesta) => respuesta.json())
+  .then((data) => {
+    data.forEach((comentario) => {
+      mostrarComentario(comentario);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+// fetch(url)
+//   .then((respuesta) => {
+//     if (!respuesta.ok) {
+//       throw new Error("Ha habido un error");
+//     } else {
+//       return respuesta.json();
+//     }
+//   })
+//   .then((data) => {
+//     mostrarComentario(data);
+//   })
+//   .catch((error) => {
+//     comentarios.textContent = error.message;
+//     console.log(error);
+//   });
+
+// Opcion 1 con promesas
+// fetch(url)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data)
+//   })
+//   .catch( error => console.log(error))
+
+// Opcion 2 async-await
+// async function obtenerUsuario(url) {
+//   try {
+//     const response = await fetch(url)
+//     const data = await response.json()
+//     console.log(data)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
