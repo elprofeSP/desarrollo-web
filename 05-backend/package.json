@@ -1,0 +1,20 @@
+{
+  "name": "curso",
+  "version": "1.0.0",
+  "description": "Esto es un curso de node.js",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "fabian": "node index.js",
+    "info": "node 02-modulos-nativos/1-os.js",
+    "os": "node ejercicios/1-os.mjs",
+    "saludar": "node ejercicios/2-process.js"
+  },
+  "keywords": [],
+  "author": "Fabian Gomez",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "5.3.0",
+    "dotenv": "16.3.1"
+  }
+}
