@@ -1,0 +1,17 @@
+### Obtener el HOME de la API
+GET http://localhost:3000/
+
+### Obtener todos los usuarios
+GET http://localhost:3000/users
+
+### Obtener un usuario por ID
+GET http://localhost:3000/users/4
+
+### Crear un usuario
+POST http://localhost:3000/users
+
+### Actualizar un usuario
+PATCH  http://localhost:3000/users/:id
+
+### Eliminar un usuario
+DELETE http://localhost:3000/users/:id
