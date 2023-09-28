@@ -1,0 +1,21 @@
+{
+  "name": "03-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.http.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev:1": "nodemon 1.http.js",
+    "dev:2": "nodemon 2.routing.js",
+    "dev:3": "nodemon 3.express.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
